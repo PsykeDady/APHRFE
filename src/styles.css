@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+.animated{
+	transition: all 300ms cubic-bezier(1,0,0,1);
+}
