@@ -11,6 +11,9 @@ import { HomepageComponent } from './components/pages/homepage/homepage.componen
 import { ReportComponent } from './components/pages/report/report.component';
 import { ProjectComponent } from './components/pages/project/project.component';
 import { EmployeeComponent } from './components/pages/employee/employee.component';
+import { TimereportDetailComponent } from './components/pages/homepage/timereport-detail/timereport-detail.component';
+import { TimereportService } from './services/timereport.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,16 @@ import { EmployeeComponent } from './components/pages/employee/employee.componen
     ReportComponent,
     ProjectComponent,
     EmployeeComponent,
+    TimereportDetailComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+	HttpClientModule
   ],
-  providers: [],
+  providers: [
+	TimereportService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

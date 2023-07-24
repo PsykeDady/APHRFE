@@ -1,4 +1,4 @@
-export const API_BASE="http://localhost:8080/aphr/"
+export const API_BASE="http://localhost:8080/aphrbe/"
 
 export const API_EMPLOYEE_BASE = API_BASE + "employee";
 export const API_PROJECT_BASE  = API_BASE + "project";
@@ -22,9 +22,9 @@ export const API_REPORT_EDIT   = API_REPORT_BASE
 export const API_REPORT_DELETE = API_REPORT_BASE
 export const API_REPORT_GET    = API_REPORT_BASE
 
-export const API_REPORT_GROUPBY_PROJECT            = API_REPORT_BASE + ""
-export const API_REPORT_GROUPBY_PROJECTEMPLOYEE    = API_REPORT_BASE + ""
-export const API_REPORT_GROUPBY_EMPLOYEEPROJECT    = API_REPORT_BASE + ""
+export const API_REPORT_GROUPBY_PROJECT            = API_REPORT_BASE + "projects"
+export const API_REPORT_GROUPBY_PROJECTEMPLOYEE    = API_REPORT_BASE + "projectemployeer"
+export const API_REPORT_GROUPBY_EMPLOYEEPROJECT    = API_REPORT_BASE + "employeerprojectr"
 
 
 
