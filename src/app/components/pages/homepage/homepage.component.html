@@ -1,9 +1,75 @@
-<div class="container">
-	<div class="row justify-content-center align-items-center g-2 mb-2" *ngFor="let tr of timereports" >
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12 text-center h3 text-decoration-underline">
+			All reports
+		</div>
+	</div>
+	<div class="row">
 		<div class="col-12">
-			<app-timereport-detail
-				[timereport]="tr"
-			></app-timereport-detail>
+			<app-timereports-table
+				[timeReports]="timereports"
+			>
+			</app-timereports-table>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 text-center h3 text-decoration-underline">
+			Projects
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<app-timereports-table
+				[timeReports]="timereportsprojects"
+				[headers]="{
+					project:true,
+					employee:false,
+					date:false,
+					hours:true
+				}"
+			>
+			</app-timereports-table>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 text-center h3 text-decoration-underline">
+			Projects and Employee
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<app-timereports-table
+				[timeReports]="timereports"
+				[headers]="{
+					project:true,
+					employee:true,
+					date:false,
+					hours:true
+				}"
+			>
+			</app-timereports-table>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 text-center h3 text-decoration-underline">
+			Employee and projects
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<app-timereports-table
+				[timeReports]="timereports"
+				[headers]="{
+					employee:true,
+					project:true,
+					date:false,
+					hours:true
+				}"
+			>
+			</app-timereports-table>
 		</div>
 	</div>
 </div>

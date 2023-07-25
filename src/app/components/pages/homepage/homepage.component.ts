@@ -9,17 +9,25 @@ import { TimereportService } from 'src/app/services/timereport.service';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit, OnDestroy{
-	timereports: TimeReport[]=[]
 	timereportupdate:Subscription|undefined = undefined
+	timereports: TimeReport[]=[]
+	timereportsprojects: TimeReport[]=[]
+	timereportspe: TimeReport[]=[]
+	timereportsep: TimeReport[]=[]
 	
 	constructor(private timereportService: TimereportService){
 		this.timereportupdate= timereportService.update.subscribe( ()=>{
 			this.timereports=timereportService.reports;
+			this.timereportService.getReportsGroupbyProject().subscribe({
+				next: (value) => {
+					this.timereportsprojects= value;
+				},
+			})
 		})
 	}
 
 	ngOnInit(): void {
-		this.timereportService.fetchReport().subscribe();
+		this.timereportService.fetchReports().subscribe();
 	}
 
 	ngOnDestroy(): void {

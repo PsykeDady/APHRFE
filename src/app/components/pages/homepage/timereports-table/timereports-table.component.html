@@ -1,0 +1,47 @@
+<div class="table-responsive">
+	<table class="table table-striped
+		table-hover	
+		table-borderless
+		table-primary
+		text-center
+		table-bordered
+		align-middle"
+	>
+		<thead class="table-dark border-light">
+			<tr>
+				<th *ngIf="headers.project" class="text-start">Project</th>
+				<th *ngIf="headers.employee" class="text-start">Employee</th>
+				<th *ngIf="headers.date" class="text-start">Date</th>
+				<th *ngIf="headers.hours" class="text-end">H</th>
+			</tr>
+			</thead>
+			<tbody class="table-group-divider border-light">
+				<tr class="table-secondary"*ngFor="let timereport of timeReports" >
+					<td 
+						*ngIf="headers.project" 
+						scope="row"
+						class="text-start"
+					>
+						{{timereport.project.name}}
+					</td>
+					<td 
+						*ngIf="headers.employee"
+						class="text-start"
+					>
+						{{timereport.employee.name}}
+					</td>
+					<td 
+						*ngIf="headers.date"
+						class="text-start"
+					>
+						{{timereport.date | date:'yyyy/MM/dd:hh:mm'}}</td>
+					<td 
+						*ngIf="headers.hours" 
+						class="text-end"
+					>
+						{{timereport.hours}}
+					</td>
+				</tr>
+			</tbody>
+	</table>
+</div>
