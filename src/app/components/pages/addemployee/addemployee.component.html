@@ -1,1 +1,24 @@
-<p>addemployee works!</p>
+<form class="" [formGroup]="newemployeeform" (ngSubmit)="saveemployee()">
+	<legend>{{edit?"Edit Employee":"New Employee"}}</legend>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 p-2 m-1">
+				<input type="text" class="form-control" formControlName="ename" placeholder="input employee name"/>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="offset-md-6 col-12 col-md-3 mb-2 mb-md-0">
+				<button type="submit" class="btn btn-success col-12" [disabled]="newemployeeform.invalid">
+					Save
+				</button>
+			</div>
+			<div class="col-12 col-md-3">
+				<button type="button" class="btn btn-danger col-12" (click)="reset()">
+					reset
+				</button>
+			</div>
+		</div>
+	</div>
+</form>

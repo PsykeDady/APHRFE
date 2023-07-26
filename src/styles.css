@@ -17,3 +17,12 @@
 .mybackdrop_content{
 	z-index: 1000;
 }
+
+input.ng-invalid.ng-touched {
+	border-color: red;
+	border-left-width: 5px;
+}
+
+input.ng-valid.ng-touched {
+	border-color: green;
+}

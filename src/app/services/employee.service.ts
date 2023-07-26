@@ -17,7 +17,8 @@ export class EmployeeService {
 	public get employees () {return this._employees}
 
 	fetchEmployees():Observable<Employee[]>{
-		this._employees.length=0; // or pop
+		this._employees.forEach(()=>{this._employees.pop()})
+		console.log(this._employees)
 		return this.httpClient.get<Employee[]>(API_EMPLOYEE_LISTS).pipe(tap(v=>{
 			console.log(v)
 			this._employees.push(...v)

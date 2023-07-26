@@ -1,1 +1,5 @@
-<p>employeers works!</p>
+<ul>
+	<li *ngFor="let employee of employees; let indice=index">
+		{{indice}} - {{employee.id}} ) {{employee.name}}
+	</li>
+</ul>

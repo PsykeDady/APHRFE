@@ -16,6 +16,9 @@ import { ProjectsComponent } from './components/pages/projects/projects.componen
 import { AddprojectComponent } from './components/pages/addproject/addproject.component';
 import { AddemployeeComponent } from './components/pages/addemployee/addemployee.component';
 import { AddreportComponent } from './components/pages/addreport/addreport.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EmployeeService } from './services/employee.service';
+import { ProjectService } from './services/project.service';
 
 @NgModule({
   declarations: [
@@ -35,10 +38,13 @@ import { AddreportComponent } from './components/pages/addreport/addreport.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-	HttpClientModule
+	HttpClientModule,
+	ReactiveFormsModule
   ],
   providers: [
-	TimereportService
+	TimereportService,
+	EmployeeService,
+	ProjectService
   ],
   bootstrap: [AppComponent]
 })
