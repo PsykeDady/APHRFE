@@ -1,38 +1,35 @@
 <div class="mybackdrop" (click)="backdropClick()">
-
-</div>
-
-
-<div class="position-fixed bottom-0 end-0 text-end m-5 p-2 mybackdrop_content">
-	<div class="container-fluid position-relative mb-5 pb-2">
-		<div class="row mb-2">
-			<div class="col-8 bg-white rounded-pill text-center align-self-center">
-				<small>new employee</small>
+	<div class="position-fixed bottom-0 end-0 text-end m-5 p-2 mybackdrop_content">
+		<div class="container-fluid position-relative mb-5 pb-2">
+			<div class="row mb-2">
+				<div class="col-8 bg-white rounded-pill text-center align-self-center">
+					<small>new employee</small>
+				</div>
+				<div class="col-4">
+					<button class="btn p-2 m-3 btn-light rounded-circle col-12" routerLink="/addemployee">
+						<span class="fa fa-user"></span>
+					</button>
+				</div>
 			</div>
-			<div class="col-4">
-				<button class="btn p-2 m-3 btn-light rounded-circle col-12" routerLink="/new">
-					<span class="fa fa-user"></span>
-				</button>
+			<div class="row mb-2">
+				<div class="col-8 bg-white rounded-pill text-center align-self-center">
+					<small>new project</small>
+				</div>
+				<div class="col-4">
+					<button class="btn p-2 m-3 btn-light rounded-circle col-12" routerLink="/addproject">
+						<span class="fa fa-suitcase"></span>
+					</button>
+				</div>
 			</div>
-		</div>
-		<div class="row mb-2">
-			<div class="col-8 bg-white rounded-pill text-center align-self-center">
-				<small>new project</small>
-			</div>
-			<div class="col-4">
-				<button class="btn p-2 m-3 btn-light rounded-circle col-12">
-					<span class="fa fa-suitcase"></span>
-				</button>
-			</div>
-		</div>
-		<div class="row mb-2">
-			<div class="col-8 bg-white rounded-pill text-center align-self-center">
-				<small>new report</small>
-			</div>
-			<div class="col-4">
-				<button class="btn p-2 m-3 btn-light rounded-circle col-12">
-					<span class="fa fa-clock-o"></span>
-				</button>
+			<div class="row mb-2">
+				<div class="col-8 bg-white rounded-pill text-center align-self-center">
+					<small>new report</small>
+				</div>
+				<div class="col-4">
+					<button class="btn p-2 m-3 btn-light rounded-circle col-12" routerLink="/addreport">
+						<span class="fa fa-clock-o"></span>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>

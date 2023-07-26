@@ -1,23 +1,24 @@
-<div class="position-absolute start-0 top-0 modal-backdrop" (click)="flagClose()">
-	<div class="bg-light modal-body h-100 animated" [ngStyle]="{'width':wider?'33%':'0px'}">
-		<div class="container">
-			<div class="row">
-				<nav class="navbar navbar-light bg-light">
-					<div class="container">
-						<button class="btn navbar-brand pull-left" (click)="flagClose()">
-							<span class="fa fa-times"></span>
-						</button>
-					</div>
-				</nav>
-			</div>
-			<div class="row" *ngFor="let button of buttons; let i=index">
-				<div class="col-12 p-2">
-					<a class="btn col-12">
-						{{button.label}}
-					</a>
+<div class="position-absolute start-0 top-0 mybackdrop" (click)="flagClose()">
+	
+</div>
+<div class="position-absolute start-0 top-0 mybackdrop_content bg-light h-100 animated" [ngStyle]="{'width':wider?'33%':'0px'}">
+	<div class="container">
+		<div class="row">
+			<nav class="navbar navbar-light bg-light">
+				<div class="container">
+					<button class="btn navbar-brand pull-left" (click)="flagClose()">
+						<span class="fa fa-times" ></span>
+					</button>
 				</div>
-				<hr class="text-muted col-10 offset-1" *ngIf="i<buttons.length-1">
+			</nav>
+		</div>
+		<div class="row" *ngFor="let button of buttons; let i=index">
+			<div class="col-12 p-2">
+				<a class="btn col-12" (click)="flagClose()" [routerLink]="button.link">
+					{{button.label}}
+				</a>
 			</div>
+			<hr class="text-muted col-10 offset-1" *ngIf="i<buttons.length-1">
 		</div>
 	</div>
 </div>

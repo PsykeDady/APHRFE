@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./floatingb.component.css']
 })
 export class FloatingbComponent {
-	menu:boolean = true;
+	menu:boolean = false;
 
 	flagMenu() {
 		this.menu=!this.menu;

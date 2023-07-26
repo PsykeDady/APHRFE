@@ -8,12 +8,14 @@ import { BackdropComponent } from './components/floatingb/backdrop/backdrop.comp
 import { FloatingbComponent } from './components/floatingb/floatingb.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/header/menu/menu.component';
-import { EmployeeComponent } from './components/pages/employee/employee.component';
 import { HomepageComponent } from './components/pages/homepage/homepage.component';
-import { ProjectComponent } from './components/pages/project/project.component';
-import { ReportComponent } from './components/pages/report/report.component';
-import { TimereportService } from './services/timereport.service';
 import { TimereportsTableComponent } from './components/pages/homepage/timereports-table/timereports-table.component';
+import { TimereportService } from './services/timereport.service';
+import { EmployeersComponent } from './components/pages/employeers/employeers.component';
+import { ProjectsComponent } from './components/pages/projects/projects.component';
+import { AddprojectComponent } from './components/pages/addproject/addproject.component';
+import { AddemployeeComponent } from './components/pages/addemployee/addemployee.component';
+import { AddreportComponent } from './components/pages/addreport/addreport.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +25,12 @@ import { TimereportsTableComponent } from './components/pages/homepage/timerepor
     HomepageComponent,
     MenuComponent,
     BackdropComponent,
-    ReportComponent,
-    ProjectComponent,
-    EmployeeComponent,
-	TimereportsTableComponent
+	TimereportsTableComponent,
+	EmployeersComponent,
+	ProjectsComponent,
+	AddprojectComponent,
+	AddemployeeComponent,
+	AddreportComponent
   ],
   imports: [
     BrowserModule,
