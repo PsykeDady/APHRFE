@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class FloatingbComponent {
 	menu:boolean = true;
 
-	onAddClick() {
+	flagMenu() {
 		this.menu=!this.menu;
 	}
 }
