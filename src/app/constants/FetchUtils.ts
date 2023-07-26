@@ -23,7 +23,7 @@ export const API_REPORT_DELETE = API_REPORT_BASE
 export const API_REPORT_GET    = API_REPORT_BASE
 
 export const API_REPORT_GROUPBY_PROJECT            = API_REPORT_BASE + "/projects"
-export const API_REPORT_GROUPBY_PROJECTEMPLOYEE    = API_REPORT_BASE + "/projectemployeer"
+export const API_REPORT_GROUPBY_PROJECTEMPLOYEE    = API_REPORT_BASE + "/projectsemployeer"
 export const API_REPORT_GROUPBY_EMPLOYEEPROJECT    = API_REPORT_BASE + "/employeerprojectr"
 
 

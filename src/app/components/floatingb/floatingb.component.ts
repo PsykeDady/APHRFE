@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./floatingb.component.css']
 })
 export class FloatingbComponent {
+	menu:boolean = true;
 
+	onAddClick() {
+		this.menu=!this.menu;
+	}
 }

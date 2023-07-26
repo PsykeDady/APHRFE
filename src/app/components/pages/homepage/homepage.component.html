@@ -22,12 +22,7 @@
 		<div class="col-12">
 			<app-timereports-table
 				[timeReports]="timereportsprojects"
-				[headers]="{
-					project:true,
-					employee:false,
-					date:false,
-					hours:true
-				}"
+				[headers]="[PROJECT,HOURS]"
 			>
 			</app-timereports-table>
 		</div>
@@ -41,13 +36,8 @@
 	<div class="row">
 		<div class="col-12">
 			<app-timereports-table
-				[timeReports]="timereports"
-				[headers]="{
-					project:true,
-					employee:true,
-					date:false,
-					hours:true
-				}"
+				[timeReports]="timereportspe"
+				[headers]="[PROJECT,EMPLOYEE,HOURS]"
 			>
 			</app-timereports-table>
 		</div>
@@ -61,13 +51,8 @@
 	<div class="row">
 		<div class="col-12">
 			<app-timereports-table
-				[timeReports]="timereports"
-				[headers]="{
-					employee:true,
-					project:true,
-					date:false,
-					hours:true
-				}"
+				[timeReports]="timereportsep"
+				[headers]="[EMPLOYEE,PROJECT,HOURS]"
 			>
 			</app-timereports-table>
 		</div>

@@ -1,1 +1,10 @@
-<p>floatingb works!</p>
+<app-backdrop
+	*ngIf="menu"
+></app-backdrop>
+
+
+<div class="position-fixed bottom-0 end-0 text-end m-5 mybackdrop_content">
+	<button class="btn btn-lg btn-success rounded-circle text-muted"  (click)="onAddClick()">
+		<span class="fa fa-plus text-white"></span>
+	</button>
+</div>
