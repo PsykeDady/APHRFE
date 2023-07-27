@@ -1,4 +1,4 @@
-export const API_BASE="http://192.168.1.74:8080/aphrbe/"
+export const API_BASE="http://localhost:8080/aphrbe/"
 
 export const API_EMPLOYEE_BASE = API_BASE + "employee";
 export const API_PROJECT_BASE  = API_BASE + "project";

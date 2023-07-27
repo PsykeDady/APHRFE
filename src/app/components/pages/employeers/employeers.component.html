@@ -1,5 +1,11 @@
-<ul>
-	<li *ngFor="let employee of employees; let indice=index">
-		{{indice}} - {{employee.id}} ) {{employee.name}}
+<ul class="list-group p-5">
+  	<li class="list-group-item" *ngFor="let employee of employees">
+		{{employee.name}}
+		<button class="btn btn-danger fa fa-trash pull-right" (click)="onDelete(employee.id)">
+
+		</button>
+		<button class="btn btn-warning fa fa-pencil pull-right" (click)="onEdit(employee)">
+
+		</button>
 	</li>
 </ul>

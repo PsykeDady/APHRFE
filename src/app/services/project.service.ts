@@ -1,8 +1,8 @@
-import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import Project from '../models/Project';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Observable, finalize, tap } from 'rxjs';
-import { API_PROJECT_ADD, API_PROJECT_EDIT, API_PROJECT_GET, API_PROJECT_LISTS, API_REPORT_DELETE } from '../constants/FetchUtils';
+import { API_PROJECT_ADD, API_PROJECT_DELETE, API_PROJECT_EDIT, API_PROJECT_GET, API_PROJECT_LISTS } from '../constants/FetchUtils';
+import Project from '../models/Project';
 
 @Injectable()
 export class ProjectService {
@@ -18,9 +18,8 @@ export class ProjectService {
 	public get projects () {return this._projects}
 
 	fetchProjects():Observable<Project[]>{
-		this._projects.length=0; // or pop
 		return this.httpClient.get<Project[]>(API_PROJECT_LISTS).pipe(tap(v=>{
-			console.log(v)
+			this._projects=[]
 			this._projects.push(...v)
 		}), finalize(()=>{this.update.emit()}))
 	}
@@ -38,7 +37,7 @@ export class ProjectService {
 	}
 
 	deleteProject(id:number):Observable<void> {
-		return this.httpClient.delete<void>(API_REPORT_DELETE+`/${id}`).pipe(finalize(()=>{
+		return this.httpClient.delete<void>(API_PROJECT_DELETE+`/${id}`).pipe(finalize(()=>{
 			this.fetchProjects().subscribe();
 		}))
 	}

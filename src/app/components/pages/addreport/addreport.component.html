@@ -1,1 +1,51 @@
-<p>addreport works!</p>
+<form class="" [formGroup]="newreportform" (ngSubmit)="savereport()">
+	<legend>{{edit?"Edit Project":"New Project"}}</legend>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 p-2 m-1" *ngIf="eloaded">
+				<select (mouseover)="onFocus()" class="form-select" formControlName="ename" id="employees">
+					<option
+						*ngFor="let employee of employees" [ngValue]="employee.id"
+					>
+						{{employee.name}}
+					</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 p-2 m-1" *ngIf="ploaded">
+				<select (mouseover)="onFocus()" class="form-select" formControlName="pname" id="projects">
+					<option
+						*ngFor="let project of projects" [ngValue]="project.id"
+					>
+						{{project.name}}
+					</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 p-2 m-1">
+				<input type="datetime-local" class="form-control" formControlName="date" placeholder="in which date"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 p-2 m-1">
+				<input type="number" min="0" class="form-control" formControlName="hours" placeholder="how many hours"/>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="offset-md-6 col-12 col-md-3 mb-2 mb-md-0">
+				<button type="submit" class="btn btn-success col-12" [disabled]="newreportform.invalid">
+					Save
+				</button>
+			</div>
+			<div class="col-12 col-md-3">
+				<button type="button" class="btn btn-danger col-12" (click)="reset()">
+					reset
+				</button>
+			</div>
+		</div>
+	</div>
+</form>

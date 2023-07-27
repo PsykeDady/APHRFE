@@ -18,9 +18,8 @@ export class TimereportService {
 	public get reports (){return this._reports;}
 
 	fetchReports():Observable<TimeReport[]>{
-		this._reports.length=0; // or pop
 		return this.httpClient.get<TimeReport[]>(API_REPORT_LISTS).pipe(tap(v=>{
-			console.log(v)
+			this._reports=[]
 			this._reports.push(...v)
 		}), finalize(()=>{this.update.emit()}))
 	}
